@@ -4175,7 +4175,6 @@ figcaption {
 
 .card:hover{
   box-shadow: -5px 10px 15px #0006;
-  width: 360px;
 }
 
 .card-image-wrapper {
