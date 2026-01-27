@@ -788,6 +788,10 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 991px) {
+  .lang-trigger{
+    margin-right: 20px;
+  }
+  
   .w-container {
     max-width: 728px;
   }
@@ -856,6 +860,10 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 767px) {
+  .lang-trigger{
+    margin-right: 20px;
+  }
+
   .w-hidden-main, .w-hidden-medium {
     display: inherit !important;
   }
@@ -925,6 +933,10 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 479px) {
+  .lang-trigger{
+    margin-right: 20px;
+  }
+
   .w-container {
     max-width: none;
   }
@@ -1404,6 +1416,10 @@ textarea.w-input, textarea.w-select {
   .w-nav-brand {
     padding-left: 10px;
   }
+
+  .lang-trigger{
+    margin-right: 20px;
+  }
 }
 
 .w-lightbox-backdrop {
@@ -1663,6 +1679,10 @@ textarea.w-input, textarea.w-select {
 
   .w-lightbox-control:hover {
     opacity: 1;
+  }
+
+  .lang-trigger{
+    margin-right: 20px;
   }
 }
 
@@ -4953,6 +4973,10 @@ figcaption {
     font-size: 28px;
     line-height: 36px;
   }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -5047,6 +5071,14 @@ figcaption {
   .blog-detail-header-wrap {
     width: 100%;
     max-width: none;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  .heading-2 {
+    font-size: 25px;
   }
 
   .container-2 {
@@ -5268,3 +5300,27 @@ figcaption {
     left: 0;
   }
 }
+
+
+/* ===== Mobile dropdown: vertical ===== */
+@media (max-width: 991px) {
+  .w-nav[data-collapse="all"] .w-nav-menu.is-open,
+  .w-nav[data-collapse="medium"] .w-nav-menu.is-open,
+  .w-nav[data-collapse="small"] .w-nav-menu.is-open,
+  .w-nav[data-collapse="tiny"] .w-nav-menu.is-open {
+    display: flex !important;
+    flex-direction: column;      /* 🔥 vertical drop */
+    align-items: stretch;        /* full width links */
+    gap: 14px;
+
+    position: absolute;
+    top: 100%;                   /* directly under navbar */
+    right: 0;
+    left: 0;                     /* full width dropdown */
+
+    background: #f8f4e6;
+    padding: 16px;
+    border-top: 1px solid rgba(37,48,62,.18);
+  }
+}
+  

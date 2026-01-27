@@ -123,3 +123,23 @@
     });
   })();
 
+
+  //menu dropdown
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".menu-button");
+    const navMenu = document.querySelector(".w-nav-menu");
+
+    if (!menuButton || !navMenu) return;
+
+    menuButton.addEventListener("click", () => {
+      navMenu.classList.toggle("is-open");
+    });
+
+    // Optional: close menu when clicking a link
+    navMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("is-open");
+      });
+    });
+  });
+
